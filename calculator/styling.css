@@ -1,0 +1,84 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.main-container {
+    display: flex;
+    height: 100vh;
+}
+
+.left-section, .right-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.calculator, .financial-calculator {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+}
+
+#plot {
+    width: 95%; /* Adjust based on actual needs */
+    height: 80vh; /* Adjust based on actual needs */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.buttons button, .financial-calculator button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+}
+
+.buttons button:hover, .financial-calculator button:hover {
+    background-color: #45a049;
+}
+
+.input {
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+}
+
+.financial-calculator input, .calculator input {
+    width: calc(100% - 22px); /* 20px padding + 2px border */
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.financial-calculator div, .calculator div {
+    width: 100%;
+}
+
+.financial-calculator {
+    width: 90%; /* Adjust to fit content better */
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+#plot {
+    margin-top: 20px; /* Ensures some space between sections */
+}
+
+.right-section {
+    align-items: center;
+    justify-content: center;
+}
+

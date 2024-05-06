@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Web Calculator with Plotting and Financial Calculations</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Left Section: Calculator and Financial Calculator -->
+        <div class="left-section">
+            <!-- Basic Calculator Section -->
+            <div class="calculator">
+                <input type="text" id="display" placeholder="Enter function (e.g., sin(x), x^2, etc.)">
+                <div class="buttons">
+                    <button onclick="press('1')">1</button>
+                    <button onclick="press('2')">2</button>
+                    <button onclick="press('3')">3</button>
+                    <button onclick="press('+')">+</button>
+                    <button onclick="press('4')">4</button>
+                    <button onclick="press('5')">5</button>
+                    <button onclick="press('6')">6</button>
+                    <button onclick="press('-')">-</button>
+                    <button onclick="press('7')">7</button>
+                    <button onclick="press('8')">8</button>
+                    <button onclick="press('9')">9</button>
+                    <button onclick="press('*')">*</button>
+                    <button onclick="clearDisplay()">C</button>
+                    <button onclick="press('0')">0</button>
+                    <button onclick="calculate()">=</button>
+                    <button onclick="press('/')">/</button>
+                    <button onclick="plotFunction()">Plot</button>
+                </div>
+            </div>
+            <!-- Financial Calculator Section -->
+            <div class="financial-calculator">
+                <h2>Financial Calculator</h2>
+                <div>
+                    <label for="principal">Principal ($): </label>
+                    <input type="number" id="principal" placeholder="Amount in dollars">
+                </div>
+                <div>
+                    <label for="interest">Annual Interest Rate (%): </label>
+                    <input type="number" id="interest" placeholder="Interest in percent">
+                </div>
+                <div>
+                    <label for="periods">Periods (months): </label>
+                    <input type="number" id="periods" placeholder="Number of months">
+                </div>
+                <button onclick="calculateLoanPayment()">Calculate Payment</button>
+                <div id="paymentResult"></div>
+            </div>
+        </div>
+        <!-- Right Section: Plotting Area -->
+        <div class="right-section">
+            <div id="plot" style="width:600px;height:400px;"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
